@@ -1,9 +1,6 @@
 void setup() {
-  print("Apple Sauce");
-  print("Apple Sauce");
-  print("Apple Sauce");
-  print("Apple Sauce");
-  print("Apple Sauce");
+  print("Final tesst before I start starting.");
+
 }
 
 void draw() {
