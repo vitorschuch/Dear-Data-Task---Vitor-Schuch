@@ -28,6 +28,9 @@ void setup() {
   south = new PVector(circleCenter.x,circleCenter.y + radius);
   east = new PVector(circleCenter.x + radius,circleCenter.y);
   west = new PVector(circleCenter.x - radius,circleCenter.y);
+  // for the text
+  textAlign(CENTER,CENTER);
+  textSize(diameter/18);
   
   // INITIALISE VISUALS
   strokeWeight(2);
@@ -44,4 +47,10 @@ void draw() {
   circle(south.x,south.y,diameter/16);
   circle(east.x,east.y,diameter/16);
   circle(west.x,west.y,diameter/16);
+  // now I want to represent this with letters inside the circles
+  fill(0);
+  text("N",north.x,north.y);
+  text("S",south.x,south.y);
+  text("E",east.x,east.y);
+  text("W",west.x,west.y);
 }
