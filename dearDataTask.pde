@@ -9,19 +9,22 @@ PVector west;
 
 void setup() {
   //CANVAS SIZE
-  size(500,500);
+  size(800,600);
   
   // INITIALISE VARIABLES 
   circleCenter = new PVector(width/2,height/2);
-  // getting a radius that fits in the window size
+  // getting a diameter that fits in the window size
   if (width > height) 
   {
-  diameter = height/2;
+    // change float and it works
+  diameter = height/1.2;
   }
   else
   {
-  diameter = width/2; 
+    // change float and it works
+  diameter = width/1.2; 
   }
+    // needed for the cardinality
   radius = diameter/2;
   // getting the position vectors of the cardinal points of the circle
   north = new PVector(circleCenter.x,circleCenter.y - radius);
