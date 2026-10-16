@@ -1,9 +1,6 @@
-void setup(){
+void setup() {
   print("Apple Sauce");
-
 }
 
-void draw(){
-
-
+void draw() {
 }
