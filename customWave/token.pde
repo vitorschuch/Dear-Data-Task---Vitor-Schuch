@@ -1,13 +1,11 @@
+cube place = new cube();
+pyramid emotion = new pyramid();
+
 class circular {
 
   void setup(float xPos, float yPos, float size) {
 
-
-
-    //circle
-    stroke(0);
-
-    circle(xPos-12, yPos, size);
-    circle(xPos+12, yPos, size);
+    place.setup(xPos - 12,yPos, size);
+    emotion.setup(xPos+12, yPos);
   }
 }
