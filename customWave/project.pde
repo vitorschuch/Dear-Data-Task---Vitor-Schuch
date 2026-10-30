@@ -1,4 +1,6 @@
 sine wave = new sine();
+circular token = new circular();
+float xPos = 50;
 
 void setup() {
   fullScreen();
@@ -12,7 +14,14 @@ void setup() {
   //wave
   strokeWeight(4);
   stroke(255);
-  wave.setup(50, 300, 5.75); // (0 to 675), (-380 to 380), (-100 to 100) any negative will flip the wave in the x-axis
+  wave.setup(xPos, 300, 5.75); // (0 to 675), (-380 to 380), (-100 to 100) any negative will flip the wave in the x-axis
+  
+  
+  for (int i = 0; i<24;i++) {
+    token.setup(xPos,random(15, height-15),20);
+    xPos = xPos + 55.1;
+    
+  }
 
   //line y
   //strokeWeight(2);
