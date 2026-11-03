@@ -1,3 +1,4 @@
+// wawaweeewa
 class sine {
 
   float w, h, angle, anglePlusOne;
