@@ -1,3 +1,4 @@
+// initializes place and emotion place holders
 cube place = new cube();
 pyramid emotion = new pyramid();
 // this will be modified
