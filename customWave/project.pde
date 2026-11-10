@@ -58,7 +58,8 @@ void setup() {
 
       if (data[k].equals(time[i])) {
         // increases per hour that is recorded
-        colourColumn = append(colour, colour[k]);
+        colourColumn = append(colourColumn, colour[k]);
+        println(colourColumn);
         babayaga = babayaga + 1;
       }
       
@@ -68,7 +69,7 @@ void setup() {
     for (int j = 0; j<babayaga; j++) {
       stroke(0);
       //colourGet(colourColumn[j]);
-      
+                    
         if (colourColumn[j].equals("baby blue")) {
     fill(babyBlue);
         }
@@ -85,10 +86,10 @@ void setup() {
     // moves onto the next hour until 0 to 23 is complete
     xPos = xPos + 55;
     // empty colourColumn
-    for (int a = 0; a < colourColumn.length; a++) {
-        colourColumn = shorten(colourColumn);
     
-    }
+    colourColumn = new String[0];
+
+
   }
 
 }
