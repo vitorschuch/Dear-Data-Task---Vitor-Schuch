@@ -1,3 +1,4 @@
+// this represents location
 class pyramid {
 
   

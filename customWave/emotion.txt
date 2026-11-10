@@ -1,0 +1,17 @@
+calm
+calm
+impatient
+content 
+happy
+good
+bad
+calm
+neutral
+nervous
+content 
+happy
+good
+bad
+tired
+excited
+content 

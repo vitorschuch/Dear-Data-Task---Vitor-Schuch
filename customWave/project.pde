@@ -5,14 +5,39 @@ float yPos;
 float spawn;
 float dataPoints;
 int babayaga;
+color babyBlue;
+color white;
+color darkBlue;
+
+//void colourGet(String x) {
+//  if (x.equals("baby blue")) {
+//    fill(babyBlue);
+//  }
+//  else if (x.equals("white")) {
+//    fill(white);
+//  }
+//  else if (x.equals("dark")) {
+//    fill(darkBlue);
+//  }
+//}
 
 void setup() {
+  
+  colorMode(HSB, 360);
+  color babyBlue = color(180,360,300);
+  color white = color(0,0,360);
+  color darkBlue = color(240,360,30);
+
   String[] time = loadStrings("time.txt");
   // need it to only read the first string then ignore anything past the first space
   String[] data = loadStrings("data.txt");
-
+  
+  String[] colour = loadStrings("colour.txt");
+  String[] colourColumn = new String[0];
+   
   fullScreen();
   background(100);
+  
   //line
   line(0, height/2, width, height/2);
   //wave
@@ -22,7 +47,7 @@ void setup() {
   wave.setup(xPos, -375, 5.75);
   dataPoints = 0;
   // places the token at each turning point or x intercept // this will be replaced
-  colorMode(RGB, 6);
+
   for (int i = 0; i<24; i++) {
   // this is 24 for the amount of hours in the day
     yPos = 15;
@@ -30,22 +55,40 @@ void setup() {
     babayaga = 0;
 
     for (int k = 0; k < data.length; k++) {
-      //print(data[k] + " ");
-      //println(time[i]);
+
       if (data[k].equals(time[i])) {
         // increases per hour that is recorded
+        colourColumn = append(colour, colour[k]);
         babayaga = babayaga + 1;
       }
+      
     }
+    
     // places the tokens
     for (int j = 0; j<babayaga; j++) {
       stroke(0);
-      fill(random(1,6),random(1,6),6);
+      //colourGet(colourColumn[j]);
+      
+        if (colourColumn[j].equals("baby blue")) {
+    fill(babyBlue);
+        }
+        else if (colourColumn[j].equals("white")) {
+    fill(white);
+        }
+        else if (colourColumn[j].equals("dark")) {
+    fill(darkBlue);
+        
+      }
       token.setup(xPos, yPos, 20);
       yPos = yPos + 25;
     }
     // moves onto the next hour until 0 to 23 is complete
     xPos = xPos + 55;
+    // empty colourColumn
+    for (int a = 0; a < colourColumn.length; a++) {
+        colourColumn = shorten(colourColumn);
+    
+    }
   }
 
 }
