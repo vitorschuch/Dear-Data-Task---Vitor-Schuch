@@ -15,16 +15,18 @@ school schoolToken = new school();
 class circular {
 
   void setup(float xPos, float yPos, float size, int locationPosition) {
+    strokeWeight(2);
     emotion.setup(xPos - 12, yPos, size);
-
+    
+    fill(360);
     if (locationPosition == 0) {
       homeToken.setup(xPos + 12, yPos, size);
     }
     if (locationPosition == 1) {
-      outsideToken.setup(xPos + 12, yPos);
+      outsideToken.setup(xPos + 12, yPos, size);
     }
     if (locationPosition == 2) {
-      busToken.setup(xPos + 12, yPos);
+      busToken.setup(xPos + 12, yPos, size);
     }
     if (locationPosition == 3) {
       schoolToken.setup(xPos + 12, yPos, size);

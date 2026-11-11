@@ -1,6 +1,7 @@
 
 // TIPS: 1) IF ERROR, MAKE SURE NOTES ARE SAVED
-
+//       2) CONTROL+H AND REMOVE ALL SPACES FROM TEXT FILES
+//       3) IF YOUR SYMBOLS LOOK CRAZY ONE DAY, MAKE THEM RELATIVE TO SIZE
 sine wave = new sine();
 circular token = new circular();
 float xPos = 50;
