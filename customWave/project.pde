@@ -86,8 +86,11 @@ void setup() {
   //line
   line(0, height/2, width, height/2);
   //wave
-  strokeWeight(4);
-  stroke(255,125);
+  strokeWeight(6);
+  stroke(255,50);
+  line(xPos,0,xPos,height);
+  line(width - xPos,0,width - xPos,height);
+  stroke(255,25);
   wave.setup(xPos, 375, 5.75); // (0 to 675), (-380 to 380), (-100 to 100) any negative will flip the wave in the x-axis
   wave.setup(xPos, -375, 5.75);
   dataPoints = 0;

@@ -19,6 +19,9 @@ neutral neutralToken = new neutral();
 class circular {
   void setup(float xPos, float yPos, float size, int locationPosition, int emotionPosition) {
 
+    
+    
+    
     strokeWeight(3.5);
     fill(100);
     if (emotionPosition == 0) {
