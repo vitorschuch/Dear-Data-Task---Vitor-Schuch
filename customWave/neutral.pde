@@ -1,9 +1,4 @@
-
-// this can be the setup for emotions
-class cube {
-
-
-
+class neutral {
   void setup(float x, float y, float size) {
 
     rectMode(CENTER);
