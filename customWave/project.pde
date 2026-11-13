@@ -66,6 +66,8 @@ void setup() {
   color babyBlue = color(180, 360, 300);
   color white = color(0, 0, 360);
   color darkBlue = color(240, 280, 90);
+  color black = color(0,0,0);
+  color grey = color(360,0,180);
 
   String[] time = loadStrings("time.txt");
   // need it to only read the first string then ignore anything past the first space
@@ -116,15 +118,18 @@ void setup() {
     // places the tokens
     for (int j = 0; j<babayaga; j++) {
       stroke(0);
+      
       // this dictates the colours and location appearance
-
-
       if (colourColumn[j].equals("babyblue")) {
         stroke(babyBlue);
       } else if (colourColumn[j].equals("white")) {
         stroke(white);
       } else if (colourColumn[j].equals("dark")) {
         stroke(darkBlue);
+      } else if (colourColumn[j].equals("black")) {
+        stroke(black);
+      } else if (colourColumn[j].equals("grey")) {
+        stroke(grey);
       }
       // now the fourth parameter should be an int between 0 and 3 ( to be increased... ), fifth should be between 0 and 10
       // it is depositing all the needed information for the next token (pair of two symbols) emotion and location respectively
